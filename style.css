@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Patua One', cursive;
+    }
+.app{
+    padding-top: 100px;
+}
+
+.container{
+    background-color: lightgray;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px black;
+}
+
+.bpm__title {
+    font-size: 40pt;
+    padding: 25px;
+}
+
+.bpm__count{
+     font-size: 75pt;
+     border: 5px solid green;
+     margin-left : 100px;
+     margin-right : 100px;
+     border-radius: 10px;
+} 
+
+.bpm__tap{
+    margin: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-width: 10px;
+    background-color: red;
+    font-weight: bold;
+    color: white
+    
+    ;
+
+}
+
