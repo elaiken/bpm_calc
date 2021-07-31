@@ -8,13 +8,26 @@ window.addEventListener("load", (_) => {
     tapButton.addEventListener('click',(_) => collectTap())
     
 }) 
-
-
- 
 const bpmDigits = []
 
+
+
+const clearArray = () => {
+    var d = new Date();
+    var n = d.getTime();
+    const lastIndex = bpmDigits.length - 1
+    const lastBeat = bpmDigits[lastIndex]
+    const resetDiff = n - lastBeat
+    console.log(resetDiff)
+    if( resetDiff > 2000){
+    bpmDigits.length = 0 
+}
+
+}
+
+
 const collectTap = () => {
-    
+    clearArray()
     
     var d = new Date();
     var n = d.getTime();
