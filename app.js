@@ -8,18 +8,22 @@ window.addEventListener("load", (_) => {
     tapButton.addEventListener('click',(_) => collectTap())
     
 }) 
-var d1 = new Date();
-var n1 = d1.getTime();
 
-const bpmDigits = [n1]
+
+ 
+const bpmDigits = []
 
 const collectTap = () => {
+    
+    
     var d = new Date();
     var n = d.getTime();
     bpmDigits.push(n)
+    const countText= document.getElementsByClassName('bpm__count')[0]
+    if (bpmDigits.length > 1 ) {
+    
     // console.log(bpmDigits)
     
-    const countText= document.getElementsByClassName('bpm__count')[0]
 
     const firstBeat = bpmDigits[0]
     const lastIndex = bpmDigits.length - 1
@@ -30,6 +34,14 @@ const collectTap = () => {
     const bpm = calculateBpm(bpmDigits.length, lastBeat - firstBeat)
      
     countText.innerHTML = bpm
+    countText.style.borderColor = "green"
+
+    
+}else{ 
+    countText.innerHTML = 0
+    countText.style.borderColor = "red"
+}
+     
     
     
 }
